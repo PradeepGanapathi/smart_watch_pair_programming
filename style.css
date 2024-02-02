@@ -40,6 +40,10 @@ body{
     display: flex;
     justify-content: center
 }
+.header_time{
+    margin-bottom: 0px;
+    margin-top: 30px;
+}
 .footer{
     display: flex;
     justify-content: space-around; 
@@ -89,4 +93,15 @@ height: 21vh;
 .body_content{
     background-color: white;
     height:17vh;
+}
+
+.header:hover{
+    cursor: pointer;
+}
+.icons:hover{
+cursor: pointer;
+}
+.day_weather{
+    display: flex;
+    justify-content: center;
 }

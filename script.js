@@ -23,6 +23,21 @@ const messageData={
     }
 }
 
+var city="erode"
+var weatherData;
+async function getWeather(){
+    const data= await fetch(`
+    https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=87cfbc9449359a5449b017e2d4c55013`)
+
+   
+  weatherData= await data.json();
+const iconId=weatherData.weather[0].icon
+const iconUrl=`http://openweathermap.org/img/w/${iconId}.png`
+document.querySelector(".weatherIcon").src=iconUrl;
+}
+
+getWeather();
+
 
 
 
@@ -117,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const homePage = document.querySelector('.home_page');
     const messagePage = document.querySelector('.message_page');
     const musicPage = document.querySelector('.music_page');
-    const timerPage = document.querySelector('.timer_page');
+    const timerPage = document.querySelector('.timer_page'); 
 
     function showHomePage() {
         homePage.style.display = 'block';
@@ -147,13 +162,12 @@ document.addEventListener('DOMContentLoaded', function () {
         timerPage.style.display = 'block';
     }
 
-    // Display home_page by default
     showHomePage();
 
-    // Click event listeners
     document.querySelector('.far.fa-comment-dots').addEventListener('click', showMessagePage);
     document.querySelector('.fas.fa-music').addEventListener('click', showMusicPage);
     document.querySelector('.far.fa-clock').addEventListener('click', showTimerPage);
+    document.querySelector('.header').addEventListener('click', showHomePage);
 });
 
-// Rest of your script...
+
