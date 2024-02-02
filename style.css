@@ -1,0 +1,92 @@
+body{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+.parentDiv{
+    display: flex;
+}
+.watch_name{
+   background-color: rgb(36 97 189);
+   height: 100vh;
+   width: 100vw
+}
+.watch_text{
+    text-align: center;
+    position: relative;
+    top: 40vh;
+    font-size: 70px;
+}
+.smart_watch{
+    background-image: url('asset/Screenshot 2024-02-02 at 10.58.07 PM.png');
+    background-size:400px;
+    background-position:55%;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+.watch_display{
+ color: white;
+ width: 15.5vw;
+ height: 32vh;
+ border-radius: 20%;
+ background-color: black;
+ margin-top: 12px;
+ margin-right: 15px;
+
+}
+.header{
+    display: flex;
+    justify-content: center
+}
+.footer{
+    display: flex;
+    justify-content: space-around; 
+    
+}
+.home_page{
+   text-align: center;
+   height: 18vh;
+}
+.music_page{
+overflow: scroll;
+height: 21vh;
+}
+.timer_page{
+    height: 18.5vh;
+}
+.stopwatch {
+    text-align: center;
+}
+.stoppedTime{
+    text-align: center;
+ color: gray;
+   
+}
+.buttons {
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 13px;
+}
+
+.message_page{
+    background-color: white;
+   border-bottom-left-radius: 30px;
+   border-bottom-right-radius: 30px;
+   border-top-right-radius: 30px;
+}
+.message_sub{
+    color: black;
+    height: 17vh;
+    overflow-y: scroll;
+}
+.sub_list{
+    border-bottom: 1px solid black;
+}
+
+.body_content{
+    background-color: white;
+    height:17vh;
+}

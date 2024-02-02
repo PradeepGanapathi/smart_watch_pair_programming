@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Watch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+</head>
+
+<body>
+    <div class="parentDiv">
+        <div class="watch_name">
+            <h1 class="watch_text">SmartWatch</h1>
+        </div>
+        <div class="smart_watch">
+            <div class="watch_display">
+                <div class="header">
+                    <p class="header_time"></p>
+                </div>
+                <div class="home_page">
+                   <h1 class="header_time"></h1>
+                   <h2 class="dayName"></h2>
+                </div>
+                <div class="message_page">
+                    <p class="message_sub"></p>
+                </div>
+                <div class="music_page">
+                    <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" frameborder="0"></iframe>
+                </div>
+                <div class="timer_page">
+                    <h2 class="stopwatch">00:00:00</h2>
+                    <h3 class="stoppedTime"></h3>
+                    <div class="buttons">
+                        <i class='fas fa-redo-alt' onclick="reset()" style='font-size:24px'></i>
+                        <i class='fas fa-play' onclick="startPause()" style='font-size:24px'></i>
+                        <i class='fas fa-stop' onclick="stop()" style='font-size:24px'></i>
+                    </div>
+                </div>
+                <div class="footer">
+                    <i class='far fa-comment-dots' style='font-size:24px;'></i>
+                    <i class='fas fa-music' style='font-size:24px'></i>
+                    <i class='far fa-clock' style='font-size:24px'></i>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
