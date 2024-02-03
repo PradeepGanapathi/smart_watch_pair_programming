@@ -118,4 +118,7 @@ cursor: pointer;
     background-color: white;
     height: 10vh;
 }
+.watch_buttons:hover{
+    cursor: pointer;
+}
 

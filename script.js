@@ -101,11 +101,12 @@ function stop() {
     if(running){
         clearInterval(timer);
         running = false;
-        updateStopwatch(); 
+        stoppedTime = seconds;
+        displayStoppedTime();
+    }else{
         stoppedTime = seconds;
         displayStoppedTime();
     }
-   
 }
 
 function reset() {
