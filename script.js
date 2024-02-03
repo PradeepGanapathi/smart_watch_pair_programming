@@ -98,11 +98,14 @@ function startPause() {
 }
 
 function stop() {
-    clearInterval(timer);
-    running = false;
-    updateStopwatch(); 
-    stoppedTime = seconds;
-    displayStoppedTime();
+    if(running){
+        clearInterval(timer);
+        running = false;
+        updateStopwatch(); 
+        stoppedTime = seconds;
+        displayStoppedTime();
+    }
+   
 }
 
 function reset() {
@@ -114,8 +117,9 @@ function reset() {
     displayStoppedTime(); 
 }
 
-const messageSub = document.querySelector('.message_sub');
 
+const messageSub = document.querySelector('.message_sub');
+const messageBodyContainer = document.querySelector('.message_body');
 
 for (const messageId in messageData) {
     const subject = messageData[messageId].subject;
@@ -126,14 +130,25 @@ for (const messageId in messageData) {
     subjectElement.textContent = subject;
     messageSub.appendChild(subjectElement);
   
+    subjectElement.addEventListener('click', () => displayBody(body));
 }
+function displayBody(body) {
+    const messageSubPage=document.querySelector('.sub_container');
+    messageSubPage.style.display='none';
+    messageBodyContainer.innerHTML = '';
+    const bodyElement = document.createElement('p');
+    bodyElement.classList.add('msg_body_text');
+    bodyElement.textContent = body;
+    messageBodyContainer.appendChild(bodyElement);
+}
+
 
 document.addEventListener('DOMContentLoaded', function () {
     const homePage = document.querySelector('.home_page');
     const messagePage = document.querySelector('.message_page');
     const musicPage = document.querySelector('.music_page');
     const timerPage = document.querySelector('.timer_page'); 
-
+    const messageSubPage=document.querySelector('.sub_container');
     function showHomePage() {
         homePage.style.display = 'block';
         messagePage.style.display = 'none';
@@ -146,6 +161,8 @@ document.addEventListener('DOMContentLoaded', function () {
         messagePage.style.display = 'block';
         musicPage.style.display = 'none';
         timerPage.style.display = 'none';
+        messageSubPage.style.display='block';
+        messageBodyContainer.innerHTML = '';
     }
 
     function showMusicPage() {

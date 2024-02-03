@@ -28,7 +28,7 @@ body{
 }
 .watch_display{
  color: white;
- width: 15.5vw;
+ width: 13.5vw;
  height: 32vh;
  border-radius: 20%;
  background-color: black;
@@ -47,18 +47,19 @@ body{
 .footer{
     display: flex;
     justify-content: space-around; 
+    padding-top: 13px;
     
 }
 .home_page{
    text-align: center;
-   height: 18vh;
+   height: 16.7vh;
 }
 .music_page{
 overflow: scroll;
-height: 21vh;
+height: 20.4vh;
 }
 .timer_page{
-    height: 18.5vh;
+    height: 18vh;
 }
 .stopwatch {
     text-align: center;
@@ -80,14 +81,19 @@ height: 21vh;
    border-bottom-left-radius: 30px;
    border-bottom-right-radius: 30px;
    border-top-right-radius: 30px;
+   overflow: hidden;
+   height: 20.4vh;
+   overflow-y: scroll;
 }
 .message_sub{
     color: black;
-    height: 17vh;
     overflow-y: scroll;
 }
 .sub_list{
-    border-bottom: 1px solid black;
+   border-bottom: 1px solid gray;
+}
+.sub_list:hover{
+    cursor: pointer;
 }
 
 .body_content{
@@ -105,3 +111,11 @@ cursor: pointer;
     display: flex;
     justify-content: center;
 }
+.msg_body_text{
+    color: black;
+}
+.message_body{
+    background-color: white;
+    height: 10vh;
+}
+
